@@ -23,14 +23,22 @@ public class Main {
 //        }while (count != 6);
         int number = 4;
         int finishNumber = 20;
+        int count = 0;
 
         while (number <= finishNumber){
             number++;
+
             if (!isEvenNumber(number)){
                 continue;
             }
+            count++;
             System.out.println("Even number " + number);
+            if (count == 5){
+                break;
+            }
+
         }
+        System.out.println("Even numbers found " + count);
     }
 
     public static boolean isEvenNumber(int number) {
